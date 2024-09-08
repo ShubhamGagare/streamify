@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently \"npx json-server --watch db.json --port 3001\" \"vite\"",
-    "build": "vite build",
+    "build": "concurrently \"npx json-server --watch db.json --port 3001\" \"vite build\"",
     "lint": "eslint .",
     "preview": "vite preview",
     "start": "concurrently \"npx json-server --watch db.json --port 3001\" \"vite\""
