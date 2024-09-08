@@ -1,0 +1,42 @@
+{
+    "keyMetrics": [
+      { "title": "Total Users", "value": "1,234,567", "icon": "Users" },
+      { "title": "Active Users", "value": "987,654", "icon": "UserCheck" },
+      { "title": "Total Streams", "value": "50,000,000", "icon": "Music" },
+      { "title": "Revenue", "value": "$5,000,000", "icon": "DollarSign" },
+      { "title": "Top Artist", "value": "Taylor Swift", "icon": "Award" }
+    ],
+    "userGrowth": {
+      "labels": ["Total","Active"],
+      "datasets": [
+        { "month": "January", "total": 1000000, "active": 800000 },
+        { "month": "February", "total": 1001000, "active": 820000 },
+        { "month": "March", "total": 1100000, "active": 840000 },
+        { "month": "April", "total": 1150000, "active": 860000 },
+        { "month": "May", "total": 1200000, "active": 880000 },
+        { "month": "June", "total": 1210000, "active": 900000 },
+        { "month": "July", "total": 1300000, "active": 910000 },
+        { "month": "August", "total": 1350000, "active": 940000 },
+        { "month": "September", "total": 1400000, "active": 960000 },
+        { "month": "Octobar", "total": 1450000, "active": 100000 },
+        { "month": "November", "total": 1500000, "active": 1100000 },
+        { "month": "December", "total": 1470000, "active": 1210000 }
+      
+      ]
+    },
+    "revenueDistribution": {
+      "labels": ["Subscriptions", "Ads", "Other"],
+      "data": [40000, 80000, 20000]
+    },
+    "topSongs": {
+      "labels": ["Song1", "Song2", "Song3", "Song4", "Song5"],
+      "data": [1200000, 980000, 850000, 720000, 650000]
+    },
+    "recentStreams": [
+      { "songName": "Song 1", "artist": "Artist 1", "dateStreamed": "2023-05-01", "streamCount": 1000, "userId": "user123" },
+      { "songName": "Song 2", "artist": "Artist 2", "dateStreamed": "2023-05-02", "streamCount": 800, "userId": "user456" },
+      { "songName": "Song 3", "artist": "Artist 3", "dateStreamed": "2023-05-03", "streamCount": 1200, "userId": "user789" },
+      { "songName": "Song 4", "artist": "Artist 4", "dateStreamed": "2023-05-04", "streamCount": 950, "userId": "user101" },
+      { "songName": "Song 5", "artist": "Artist 5", "dateStreamed": "2023-05-05", "streamCount": 1100, "userId": "user202" }
+    ]
+  }
