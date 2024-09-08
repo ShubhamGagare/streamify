@@ -1,6 +1,7 @@
 # React + Vite Project
 
 This project is a React application bootstrapped with Vite for fast development and building.
+![image](https://github.com/user-attachments/assets/6bc1419d-53b5-4715-a916-27bd965dccb6)
 
 ## Prerequisites
 
