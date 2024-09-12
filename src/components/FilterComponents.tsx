@@ -27,15 +27,16 @@ export const FilterInput: React.FC<FilterInputProps> = ({ columnId, filter, valu
     case 'date':
       return (
         <DateRangePicker
+         className='w-full'
           value={value as DateRange | undefined}
           onChange={(newValue) => onChange(newValue)}
         />
       )
     case 'checkbox':
       return (
-        <div className="space-y-2">
+        <div className="space-y-2 w-full">
           {options.map((option) => (
-            <div key={option} className="flex items-center space-x-2">
+            <div key={option} className="flex w-full items-center space-x-2">
               <Checkbox
                 id={`${columnId}-${option}`}
                 checked={(value as string[] || []).includes(option)}

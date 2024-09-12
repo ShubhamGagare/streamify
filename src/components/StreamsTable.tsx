@@ -164,7 +164,7 @@ export function StreamsTable() {
               </CommandList>
             </Command>
             <Separator orientation='vertical' className=' h-auto'/>
-            <div className='w-[200px]'>
+            <div className='w-[300px]'>
               {selectedColumn ? 
                 <div className="flex-col space-y-4">
                   <h4 className="font-medium leading-none">Filter by {selectedColumn?.Header as string}</h4>
