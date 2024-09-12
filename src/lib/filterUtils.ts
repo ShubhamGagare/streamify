@@ -5,7 +5,7 @@ import { DateRange } from 'react-day-picker';
 export type FilterType = 
   | { type: 'text'; value: string }
   | { type: 'checkbox'; value: string[] }
-  | { type: 'date'; value: DateRange }
+  | { type: 'date'; value: string }
   | { type: 'range'; value: [number, number] }
 
 

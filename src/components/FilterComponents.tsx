@@ -26,10 +26,11 @@ export const FilterInput: React.FC<FilterInputProps> = ({ columnId, filter, valu
       )
     case 'date':
       return (
-        <DateRangePicker
-         className='w-full'
-          value={value as DateRange | undefined}
-          onChange={(newValue) => onChange(newValue)}
+        <Input
+          type="date"
+          value={value || ''}
+          onChange={(e) => onChange(e.target.value)}
+          placeholder={`Select ${columnId}`}
         />
       )
     case 'checkbox':
@@ -55,10 +56,10 @@ export const FilterInput: React.FC<FilterInputProps> = ({ columnId, filter, valu
     case 'range':
       return (
         <Slider
-          value={value || [0, 100]}
+          value={value || [0, 2000]}
           onValueChange={(newValue) => onChange(newValue)}
           min={0}
-          max={100}
+          max={2000}
           step={1}
         />
       )
@@ -77,10 +78,7 @@ export const renderFilterValue = (filter: FilterType) => {
     case 'range':
       return `${(filter.value as number[])[0]} - ${(filter.value as number[])[1]}`
     case 'date':
-      const dateRange = filter.value as DateRange
-      return dateRange.from && dateRange.to
-        ? `${dateRange.from.toLocaleDateString()} - ${dateRange.to.toLocaleDateString()}`
-        : 'No date range selected'
+      return filter.value
     case 'text':
     default:
       return filter.value as string

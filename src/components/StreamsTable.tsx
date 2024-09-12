@@ -48,7 +48,13 @@ export function StreamsTable() {
       setArtistOptions(uniqueArtists)
     }
   }, [data])
-
+  const multiValueFilter = (rows, id, filterValue) => {
+    const filterValues = Array.isArray(filterValue) ? filterValue : [];
+    return rows.filter(row => {
+      const cellValue = row.values[id];
+      return filterValues.length === 0 || filterValues.includes(cellValue);
+    });
+  };
   const {
     getTableProps,
     getTableBodyProps,
@@ -62,14 +68,9 @@ export function StreamsTable() {
     {
       columns,
       data: memoizedData,
-      filterTypes: {
-        checkbox: (rows, id, filterValue) => {
-          return rows.filter(row => {
-            const rowValue = row.values[id]
-            return filterValue.length === 0 || filterValue.includes(rowValue)
-          })
-        },
-      },
+      // filterTypes: {
+      //   checkbox: multiValueFilter,
+      // },
     },
     useFilters,
     useGlobalFilter,

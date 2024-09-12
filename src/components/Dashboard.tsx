@@ -16,7 +16,7 @@ export default function Dashboard() {
             <main>
                 <div className=" mx-auto py-4 sm:px-6 lg:px-8">
                     <div className="px-4 py-6 sm:px-0">
-                    <div className="mt-8">
+                    <div className="mt-8 pb-8">
                             <StreamsTable />
                         </div>
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

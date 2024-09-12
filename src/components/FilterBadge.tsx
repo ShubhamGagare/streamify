@@ -32,7 +32,7 @@ export const FilterBadge: React.FC<FilterBadgeProps> = ({
   return (
     <Badge 
       variant="secondary" 
-      className="h-9 px-3 py-2 gap-2 cursor-pointer"
+      className="h-9 px-3 py-2 gap-1 cursor-pointer"
       onClick={handleBadgeClick}
     >
       <span className="mr-2">{columnName}:</span>
