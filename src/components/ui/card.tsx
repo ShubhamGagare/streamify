@@ -1,7 +1,8 @@
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
-
+import { getRandomBorderRadius } from "@/lib/randomBorderRadius";
+const borderRadiusStyles = getRandomBorderRadius();
 const Card = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -12,6 +13,8 @@ const Card = React.forwardRef<
       "rounded-xl border bg-card text-card-foreground shadow",
       className
     )}
+    style={borderRadiusStyles}
+
     {...props}
   />
 ))
